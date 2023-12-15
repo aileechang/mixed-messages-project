@@ -1,3 +1,4 @@
+// Object holding arrays for the random hero
 const superhero = {
     name: ['Quantum Blaze', 'Solar Sentinel', 'Thunderstrike', 'Shadow Seraph', 'Velocity Vortex', 'Nebula Nova', 'Frostbite Fury', 'Iron Phoenix', 'Echo Enigma', 'Radiant Ronin', 'Mystic Mirage', 'Celestial Cyclone'],
     superpower: [
@@ -16,11 +17,13 @@ const superhero = {
     planet: ['Astraloria', 'Nebulon Prime', 'Solaris Alpha', 'Galactara', 'Arcanis Major', 'Nova Luna', 'Vortexia', 'Stellaris Omega', 'Ecliptus Zeta', 'Aetherion Theta', 'Orionis Borealis']
 }
 
+// Randomizes an index number
 function getRandomIndex(prop) {
     let randomIndex = Math.floor(Math.random() * prop.length);
     return randomIndex;
 }
 
+// Create a superhero using randomized index
 function randomizeMySuperhero() {
     const nameIndex = getRandomIndex(superhero.name);
     const powerIndex = getRandomIndex(superhero.superpower);
@@ -34,3 +37,10 @@ function randomizeMySuperhero() {
 
     return mySuperhero;
 }
+
+// Output the randomized superhero to user
+console.log("Which Superhero Am I?");
+const mySuperhero = randomizeMySuperhero();
+console.log("Name: " + mySuperhero.name);
+console.log("Superpower: " + mySuperhero.superpower);
+console.log("Planet: " + mySuperhero.planet);
