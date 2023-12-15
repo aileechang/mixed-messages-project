@@ -20,3 +20,17 @@ function getRandomIndex(prop) {
     let randomIndex = Math.floor(Math.random() * prop.length);
     return randomIndex;
 }
+
+function randomizeMySuperhero() {
+    const nameIndex = getRandomIndex(superhero.name);
+    const powerIndex = getRandomIndex(superhero.superpower);
+    const planetIndex = getRandomIndex(superhero.planet);
+
+    const mySuperhero = {
+        name: superhero.name[nameIndex],
+        superpower: superhero.superpower[powerIndex],
+        planet: superhero.planet[planetIndex]
+    };
+
+    return mySuperhero;
+}
